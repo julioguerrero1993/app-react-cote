@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "app-cote",
-    "slug": "app-cote",
+    "name": "app-cote2",
+    "slug": "app-cote2",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -21,6 +21,7 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "description": ""
   }
 }

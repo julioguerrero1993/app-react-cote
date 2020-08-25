@@ -1,16 +1,18 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { Component} from 'react';
 import { StyleSheet, Text, View, ImageBackground } from 'react-native';
-import Calendario from './components/Calendario'
+import Calendar from './components/Calendar';
 
 export default class App extends Component {
   render(){
     return (
       <View style={styles.container}>
       <ImageBackground source={image} style={styles.image}>
+      
       <View style={styles.halfHeight}>
-        <Calendario/>
+      
       </View>
+      <Calendar/>
       <View style={styles.quarterHeight}>
 
       </View>
@@ -24,21 +26,20 @@ const image = { uri: "https://estaticos.muyinteresante.es/media/cache/1140x_thum
  
 const styles = StyleSheet.create({
   container: {
-      flex: 2,
+      flex: 6,
       flexDirection: 'column'
   },
   halfHeight: {
-      flex: 2,
+      flex: 4,
       borderWidth: 5,
   },
   quarterHeight: {
       flex: 2,
-      borderWidth: 5
+      borderWidth: 2
   },
   image: {
-    flex: 1,
+    flex: 6,
     resizeMode: "cover",
-    justifyContent: "center",
     backgroundColor: 'grey'
   },
   text: {

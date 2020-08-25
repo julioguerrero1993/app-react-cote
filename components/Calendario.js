@@ -6,15 +6,18 @@ export default function App() {
   return (
     <View
       style={{
-        flex: 1,
-        alignItems: 'center',
+        flex: 3,
+        alignItems: 'flex-end',
         justifyContent: 'space-around',
+        width: 100,
+        
       }}>
       <Calendar
-        onChange={(range) => console.log(range)}
-        minDate={new Date(2018, 3, 20)}
-        startDate={new Date(2018, 3, 30)}
-        endDate={new Date(2018, 4, 5)}
+        onChange={(range) =>
+           console.log(range)}
+        minDate={new Date(2020, 7, 20)}
+        startDate={new Date(2020, 7, 30)}
+        endDate={new Date(2020, 9, 30)}
         theme={{
             activeDayColor: {},
             monthTitleTextStyle: {
