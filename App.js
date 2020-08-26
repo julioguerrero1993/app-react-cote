@@ -2,6 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import React, { Component} from 'react';
 import { StyleSheet, Text, View, ImageBackground } from 'react-native';
 import Calendar from './components/Calendar';
+import DetailDay from './components/DetailDay'
 
 export default class App extends Component {
   render(){
@@ -10,11 +11,11 @@ export default class App extends Component {
       <ImageBackground source={image} style={styles.image}>
       
       <View style={styles.halfHeight}>
-      
-      </View>
       <Calendar/>
+      </View>
+      
       <View style={styles.quarterHeight}>
-
+        <DetailDay/>
       </View>
     </ImageBackground>
     </View>
@@ -30,15 +31,14 @@ const styles = StyleSheet.create({
       flexDirection: 'column'
   },
   halfHeight: {
-      flex: 4,
-      borderWidth: 5,
+      flex: 2,
+      marginTop: 30
   },
   quarterHeight: {
       flex: 2,
-      borderWidth: 2
   },
   image: {
-    flex: 6,
+    flex: 1,
     resizeMode: "cover",
     backgroundColor: 'grey'
   },

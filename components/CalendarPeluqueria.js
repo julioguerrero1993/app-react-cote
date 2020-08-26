@@ -3,8 +3,18 @@ import { View, Text, Button, Platform } from 'react-native';
 import {Calendar, CalendarList, Agenda} from 'react-native-calendars';
 import {LocaleConfig} from 'react-native-calendars';
 
-export default function App() {
-    return (
+LocaleConfig.locales['fr'] = {
+  monthNames: ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octibre','Noviembre','Diciembre'],
+  monthNamesShort: ['Ene.','Feb.','Mar','Abril','May','Jun','Jul.','Agos','Sept.','Oct.','Nov.','Dic'],
+  dayNames: ['Domingo','Lunes','Martes','Miercoles','Jueves','Viernes','Sabado'],
+  dayNamesShort: ['Dom.','Lun.','Mar.','Mier.','Jue.','Vie.','Sab'],
+  today: 'Aujourd\'hui'
+  };
+  LocaleConfig.defaultLocale = 'fr';
+
+export default class CalendarPeluqueria extends Component{
+render(){
+  return (
         <Calendar
             // Collection of dates that have to be marked. Default = {}
             markedDates={{
@@ -21,7 +31,6 @@ export default function App() {
               // Specify theme properties to override specific styles for calendar parts. Default = {}
               onDayPress={(day) => {
                 console.log('selected day', day);
-                
               }}
               theme={{
                 backgroundColor: '#ffffff',
@@ -49,14 +58,5 @@ export default function App() {
                 textMonthFontSize: 16,
                 textDayHeaderFontSize: 16
               }}
-            />
-    );
-  }
-  LocaleConfig.locales['fr'] = {
-    monthNames: ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octibre','Noviembre','Diciembre'],
-    monthNamesShort: ['Ene.','Feb.','Mar','Abril','May','Jun','Jul.','Agos','Sept.','Oct.','Nov.','Dic'],
-    dayNames: ['Domingo','Lunes','Martes','Miercoles','Jueves','Viernes','Sabado'],
-    dayNamesShort: ['Dom.','Lun.','Mar.','Mier.','Jue.','Vie.','Sab'],
-    today: 'Aujourd\'hui'
-  };
-  LocaleConfig.defaultLocale = 'fr';
+            /> );
+    }}
